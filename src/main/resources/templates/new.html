@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuw Evenement</title>
+    <link rel="stylesheet" th:href="@{/Layout.css}">
+</head>
+
+<header th:replace="fragments/header :: header"></header>
+
+<body>
+
+<div class="container">
+    <div class="new-event">
+        <h2>Nieuw Evenement Toevoegen</h2>
+        <form th:action="@{/new}" method="post" th:object="${evenement}">
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel" name="titel" th:field="*{titel}" required/>
+
+            <label for="organisatie">Organisatie:</label>
+            <input type="text" id="organisatie" name="organisatie" th:field="*{organisatie}" required/>
+
+            <label for="omschrijving">Omschrijving:</label>
+            <textarea id="omschrijving" name="omschrijving" th:field="*{omschrijving}" required></textarea>
+
+            <label for="mail">Contact Email:</label>
+            <input type="email" id="mail" name="mail" th:field="*{mail}" required/>
+
+            <label for="tijdstip">Tijdstip:</label>
+            <input type="datetime-local" id="tijdstip" name="tijdstip" th:field="*{tijdstip}" required/>
+
+            <div>
+                <h3><label for="locatie">Locatie:</label></h3>
+                <select id="locatie" th:field="*{locatie}" required>
+                    <option value="">-- Kies een locatie --</option>
+                    <option th:each="locatie : ${locaties}"
+                            th:value="${locatie.id}"
+                            th:text="${locatie.naam}">
+                    </option>
+                </select>
+            </div>
+
+            <button type="submit">Evenement Toevoegen</button>
+        </form>
+    </div>
+</div>
+</body>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</html>

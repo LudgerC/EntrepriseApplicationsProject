@@ -1,0 +1,219 @@
+body{
+    text-align: center ;
+    align-content: center ;
+    justify-content: center ;
+    background-image: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    background-color: rgb(243, 156, 102);
+    text-align: center ;
+    align-content: center ;
+    justify-content: center ;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+header{
+    background-color: black ;
+    color: White ;
+    margin: 0 auto ;
+    max-width: 1200px ;
+    padding: 10px ;
+    text-align: center ;
+    border-bottom: 2px White solid ;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+footer{
+    background-color: black ;
+    color: White ;
+    margin: 0 auto ;
+    max-width: 1200px ;
+    padding: 10px ;
+    text-align: center ;
+    border-top: 2px White solid ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+
+header a{
+    color: White ;
+    text-decoration: none ;
+    padding: 10px ;
+}
+
+header nav a:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black ;
+    text-decoration: underline ;
+    border-radius: 5px ;
+    padding: 5px ;
+    transition-delay: 0.1S ;
+    transition-duration: 0.5S ;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px 15px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}
+th {
+    background-color: gray;
+}
+
+td {
+    background-color: white;
+}
+td a {
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+td a:hover {
+    color: black;
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+    border: none;
+    padding: 0;
+    background: none;
+
+}
+button a {
+    padding: 10px 20px;
+    background-color: deeppink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+button a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    text-decoration: underline;
+    border: none;
+}
+
+.details{
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.new-event {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.new-event h2,
+.new-event h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.new-event label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.new-event input,
+.new-event textarea,
+.new-event select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.new-event textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.new-event button {
+    width: 100%;
+    padding: 10px;
+    background-color: deeppink;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-event button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: deeppink;
+    text-decoration: underline;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    header, footer, .container {
+        margin: 0 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+td::before {
+    content: attr(data-label);
+}
+
+@media (max-width: 480px) {
+    .container table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+}
+
+
+
+
+

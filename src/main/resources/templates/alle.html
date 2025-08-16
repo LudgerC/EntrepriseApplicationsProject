@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle evenementen</title>
+    <link rel="stylesheet" th:href="@{/Layout.css}">
+</head>
+
+<header th:replace="fragments/header :: header"></header>
+
+<body>
+<div class="container">
+<h2>Alle evenementen</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Titel</th>
+        <th>Organisatie</th>
+        <th>Tijdstip</th>
+        <th>Details</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="evenement : ${evenementen}">
+        <td th:text="${evenement.titel}" data-th-label="Titel">Titel</td>
+        <td th:text="${evenement.organisatie}" data-th-label="Organisatie">Organisatie</td>
+        <td th:text="${evenement.tijdstip}" data-th-label="Tijdstip">Tijdstip</td>
+        <td><a th:href="@{'/details/' + ${evenement.id}}">Details</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<button><a th:href="@{/new}">Nieuw evenement toevoegen</a></button>
+</div>
+</body>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</html>

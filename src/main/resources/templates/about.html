@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" th:href="@{/Layout.css}">
+</head>
+<header th:replace="fragments/header :: header"></header>
+
+<body>
+<div class="container">
+    <div class="details">
+        <h2>Over Ons</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan neque at purus facilisis, a bibendum eros dapibus.
+        </p>
+
+        <h3>Contactgegevens</h3>
+        <p>Adres: Brogniezstraat 27, 1070 Anderlecht</p>
+        <p>Telefoon: 02 123 45 67</p>
+        <p>Email: info@anderlechtengo.be</p>
+
+        <h3>Beschrijving</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan neque at purus facilisis, a bibendum eros dapibus.
+        </p>
+    </div>
+</div>
+</body>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</html>

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenement Details</title>
+    <link rel="stylesheet" th:href="@{/Layout.css}">
 </head>
+
+<header th:replace="fragments/header :: header"></header>
+
 <body>
-$END$
+<div class="container">
+    <div class="details">
+        <h2 th:text="${evenement.titel}">Evenement titel</h2>
+
+        <p><strong>Organisatie:</strong> <span th:text="${evenement.organisatie}">Organisatie</span></p>
+
+        <p><strong>Omschrijving:</strong> <span th:text="${evenement.omschrijving}">Omschrijving</span></p>
+        <p><strong>Contact Email:</strong> <span th:text="${evenement.mail}">Email</span></p>
+        <p><strong>Tijdstip:</strong> <span th:text="${evenement.tijdstip}">Datum Tijd</span></p>
+        <h3>Locatie</h3>
+        <p><strong>Naam:</strong> <span th:text="${locatie.naam}">Locatie Naam</span></p>
+        <p><strong>Adres:</strong> <span th:text="${locatie.adres}">Adres</span></p>
+        <p><strong>Capaciteit:</strong> <span th:text="${locatie.capaciteit}">Capaciteit</span></p>
+    </div>
+</div>
 </body>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
 </html>
